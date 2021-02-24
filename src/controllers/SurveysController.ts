@@ -20,9 +20,9 @@ class SurveysController {
     async show(request: Request, response: Response) {
         const surveysRepository = getCustomRepository(SurveysRepository);
 
-        const all = await surveysRepository.find();
+        const surveys = await surveysRepository.find();
 
-        return response.status(200).json({ all });
+        return response.status(200).json({ surveys });
     }
 }
 
